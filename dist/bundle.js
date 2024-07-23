@@ -1601,24 +1601,24 @@ var Incremancer;
                     new le(45, "Earth Freeze", this.types.unlockSpell, this.costs.bones, 5e3, 1, 4, 1, "Learn the Earth Freeze spell which can freeze all humans in place for a short time.", "New spell learned, Earth Freeze!", 209), 
                     new le(46, "Plague Armor", this.types.plagueArmor, this.costs.bones, 15e3, 1.3, .02, 45, "The best defense is a good offense? True in the case of Plague Armor which reduces the damage done by infected humans by 2% per rank.", null, 218), 
                     new le(47, "Bulletproof", this.types.bulletproof, this.costs.bones, 6e4, 1.6, .05, 20, "Craft your earth golems from much harder stone. Each rank gives them 5% chance to reflect bullets back to their source.", null, 220), 
-                    new le(48, "Bombs Away", this.types.harpyBombs, this.costs.bones, 5e5, 1.3, 1, 100, "Upgrade your harpies so they can carry more than just one bomb at a time.", null, 222), 
+                    new le(48, "Bombs Away", this.types.harpyBombs, this.costs.bones, 5e5, 1.3, 1, 90, "Upgrade your harpies so they can carry more than just one bomb at a time.", null, 222), 
                     new le(60, "Extra Limbs", this.types.golemDamagePC, this.costs.parts, 900, 1.1, .02, 0, "Your golems gain +2% damage with each rank of Extra Limbs.", null, 220), 
                     new le(61, "Big Boned", this.types.golemHealthPC, this.costs.parts, 1e3, 1.103, .02, 0, "Your golems gain +2% health with each rank of Big Boned.", null, 220)
                 ], 
                 this.prestigeUpgrades = [
                     new le(108, "A Small Investment", this.types.startingPC, this.costs.prestigePoints, 10, 1.25, 1, 0, "Each rank gives you an additional 500 blood, 50 brains, and 200 bones when starting a new level.", null, null), 
                     new le(109, "Time Warp", this.types.unlockSpell, this.costs.prestigePoints, 50, 1, 1, 1, "Unlock the Time Warp spell in order to speed up the flow of time.", null, null), 
-                    new le(110, "Master of Death", this.types.energyCost, this.costs.prestigePoints, 1e3, 1.2, 1, 100, "Each rank reduces the energy cost of summoning a zombie by 1", null, null), 
-                    new le(101, "Blood Storage", this.types.bloodStoragePC, this.costs.prestigePoints, 10, 1.21, .2, 0, "Additional 20% blood storage for each rank.", null, null), 
+                    new le(110, "Master of Death", this.types.energyCost, this.costs.prestigePoints, 1e3, 1.2, 1, 9, "Each rank reduces the energy cost of summoning a zombie by 1", null, null), 
+                    new le(101, "Blood Storage", this.types.bloodStoragePC, this.costs.prestigePoints, 10, 1.22, .2, 0, "Additional 20% blood storage for each rank.", null, null), 
                     new le(102, "Blood Rate", this.types.bloodGainPC, this.costs.prestigePoints, 10, 1.21, .2, 0, "Additional 20% blood income rate for each rank.", null, null), 
-                    new le(103, "Brain Storage", this.types.brainsStoragePC, this.costs.prestigePoints, 10, 1.21, .2, 0, "Additional 20% brain storage for each rank.", null, null), 
+                    new le(103, "Brain Storage", this.types.brainsStoragePC, this.costs.prestigePoints, 10, 1.22, .2, 0, "Additional 20% brain storage for each rank.", null, null), 
                     new le(104, "Brain Rate", this.types.brainsGainPC, this.costs.prestigePoints, 10, 1.21, .2, 0, "Additional 20% brain income rate for each rank.", null, null), 
                     new le(105, "Bone Rate", this.types.bonesGainPC, this.costs.prestigePoints, 10, 1.21, .2, 0, "Additional 20% bones income rate for each rank.", null, null), 
                     new le(111, "Parts Rate", this.types.partsGainPC, this.costs.prestigePoints, 10, 1.21, .2, 0, "Additional 20% creature parts income rate for each rank.", null, null), 
                     new le(112, "Auto Construction", this.types.autoconstruction, this.costs.prestigePoints, 250, 1, 1, 1, "Unlock the ability to automatically start construction of the cheapest available building option.", null, null), 
                     new le(114, "Auto Shop", this.types.autoshop, this.costs.prestigePoints, 250, 1, 1, 1, "Unlock the ability to automatically purchase items from the shop.", null, null), 
                     new le(113, "Graveyard Health", this.types.graveyardHealth, this.costs.prestigePoints, 10, 1.2, .1, 0, "Additional 10% graveyard health during boss levels with each rank.", null, null), 
-                    new le(115, "Talent Point", this.types.talentPoint, this.costs.prestigePoints, 50, 1.1, 1, 0, "Additional skeleton talent point", null, null)
+                    new le(115, "Talent Point", this.types.talentPoint, this.costs.prestigePoints, 20, 1.05, 1, 0, "Additional skeleton talent point", null, null)
                 ], oe.instance) return oe.instance;
 
             oe.instance = this
