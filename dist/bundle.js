@@ -285,37 +285,33 @@ var Incremancer;
     }
     class q {
         constructor() {
-            if (this.cooldownReduction = 0, this.timeExtension = 0, this.costReduction = 0, this.skeleton = new Xe, this.zombies = new Ae, this.humans = new Se, this.spellMap = new Map, this.spells = [new W(1, "Time Warp", "Speed up the flow of time for 30 seconds", "", 90, 30, 0, (function () {
-                ne.getInstance().gameSpeed = 2
-            }), (function () {
-                ne.getInstance().gameSpeed = 1
-            })), new W(2, "Energy Charge", "5x Energy rate for 20 seconds, cost 50 energy", "", 30, 20, 50, (function () {
-                ne.getInstance().energySpellMultiplier = 5
-            }), (function () {
-                ne.getInstance().energySpellMultiplier = 1
-            })), new W(3, "Detonate", "Turns your zombies into fast moving living bombs, cost 69 energy... nice", "", 20, 8, 69, (function () {
-                (new q).zombies.detonate = !0
-            }), (function () {
-                (new q).zombies.detonate = !1
-            })), new W(4, "Earth Freeze", "Freeze all humans in place preventing them from moving for 15 seconds, cost 75 energy", "", 20, 15, 75, (function () {
-                (new q).humans.frozen = !0
-            }), (function () {
-                (new q).humans.frozen = !1
-            })), new W(5, "Gigazombies", "For 5 seconds any zombies spawned will be giants with 10x health and attack damage, cost 100 energy", "", 60, 5, 100, (function () {
-                (new q).zombies.super = !0
-            }), (function () {
-                (new q).zombies.super = !1
-            })), new W(6, "Incinerate", "Burns humans near the skeleton champion", "Has a chance to cast Incinerate when attacking, burning all humans within a large radius of the Skeleton", 1, 10, 10, (function () {
-                (new q).skeleton.incinerate(), this.timer = 1
-            }), (function () { })), new W(7, "Pandemic", "Causes plague to spread", "Has a chance to cast Pandemic when attacking, causing infected humans to spread the plague to each other for 20 seconds", 10, 20, 10, (function () {
-                (new q).humans.pandemic = !0
-            }), (function () {
-                (new q).humans.pandemic = !1
-            })), new W(8, "Part Storm", "Doubles parts", "Has a chance to cast Part Storm when attacking, doubling the parts production of your factory machines for 15 seconds", 10, 15, 10, (function () {
-                (new se).storm = !0
-            }), (function () {
-                (new se).storm = !1
-            }))], q.instance) return q.instance;
+            if (this.cooldownReduction = 0, this.timeExtension = 0, this.costReduction = 0, this.skeleton = new Xe, this.zombies = new Ae, this.humans = new Se, this.spellMap = new Map, 
+                this.spells = [
+                    new W(1, "Time Warp", "Speed up the flow of time for 30 seconds", "", 30, 30, 0, 
+                          (function () { ne.getInstance().gameSpeed = 4 }), 
+                          (function () { ne.getInstance().gameSpeed = 1 })), 
+                    new W(2, "Energy Charge", "5x Energy rate for 20 seconds, cost 50 energy", "", 30, 20, 50, 
+                          (function () { ne.getInstance().energySpellMultiplier = 5 }), 
+                          (function () { ne.getInstance().energySpellMultiplier = 1 })), 
+                    new W(3, "Detonate", "Turns your zombies into fast moving living bombs, cost 69 energy... nice", "", 20, 8, 69, 
+                          (function () { (new q).zombies.detonate = !0 }), 
+                          (function () { (new q).zombies.detonate = !1 })), 
+                    new W(4, "Earth Freeze", "Freeze all humans in place preventing them from moving for 15 seconds, cost 75 energy", "", 20, 15, 75, 
+                          (function () { (new q).humans.frozen = !0 }), 
+                          (function () { (new q).humans.frozen = !1 })), 
+                    new W(5, "Gigazombies", "For 5 seconds any zombies spawned will be giants with 10x health and attack damage, cost 100 energy", "", 60, 5, 100, 
+                          (function () { (new q).zombies.super = !0 }), 
+                          (function () { (new q).zombies.super = !1 })), 
+                    new W(6, "Incinerate", "Burns humans near the skeleton champion", "Has a chance to cast Incinerate when attacking, burning all humans within a large radius of the Skeleton", 1, 10, 10, 
+                          (function () { (new q).skeleton.incinerate(), this.timer = 1 }), 
+                          (function () { })), 
+                    new W(7, "Pandemic", "Causes plague to spread", "Has a chance to cast Pandemic when attacking, causing infected humans to spread the plague to each other for 20 seconds", 10, 20, 10, 
+                          (function () { (new q).humans.pandemic = !0 }), 
+                          (function () { (new q).humans.pandemic = !1 })), 
+                    new W(8, "Part Storm", "Doubles parts", "Has a chance to cast Part Storm when attacking, doubling the parts production of your factory machines for 15 seconds", 10, 15, 10, 
+                          (function () { (new se).storm = !0 }), 
+                          (function () { (new se).storm = !1 }))
+                ], q.instance) return q.instance;
             q.instance = this, this.spells.forEach((e => this.spellMap.set(e.id, e)))
         }
         lockAllSpells() {
@@ -1567,12 +1563,12 @@ var Incremancer;
             }, 50, 1, 1, 1, 220, "Build an outfitter to upgrade the abilities of your harpies.", "Harpy upgrades now available in the shop!")], 
                 this.upgrades = [
                     new le(1, "Bloodthirst", this.types.damage, this.costs.blood, 50, 1.135, 1, 100, "Your zombies thirst for blood and do +1 damage for each rank of Bloodthirst.", null, null), 
-                    new le(9, "Sharpened Teeth", this.types.damage, this.costs.blood, 3e3, 1.125, 3, 200, "Your zombies bites do +3 damage with each rank of Sharpened Teeth.", null, 206), 
-                    new le(11, "Razor Claws", this.types.damage, this.costs.blood, 28e3, 1.115, 5, 300, "Your zombies attacks do +5 damage with each rank of Razor Claws.", null, 211), 
+                    new le(9, "Sharpened Teeth", this.types.damage, this.costs.blood, 3e3, 1.125, 3, 100, "Your zombies bites do +3 damage with each rank of Sharpened Teeth.", null, 206), 
+                    new le(11, "Razor Claws", this.types.damage, this.costs.blood, 28e3, 1.115, 5, 100, "Your zombies attacks do +5 damage with each rank of Razor Claws.", null, 211), 
                     new le(16, "Killer Instinct", this.types.damage, this.costs.blood, 1e6, 1.1, 8, 0, "Your zombies attacks do +8 damage with each rank of Killer Instinct.", null, 220), 
                     new le(2, "Like Leather", this.types.health, this.costs.blood, 100, 1.135, 10, 100, "Your zombies gain tougher skin and +10 health with each rank.", null, null), 
-                    new le(10, "Thick Skull", this.types.health, this.costs.blood, 5e3, 1.125, 25, 200, "Your zombies gain +25 health with each rank.", null, 206), 
-                    new le(12, "Battle Hardened", this.types.health, this.costs.blood, 32e3, 1.115, 40, 300, "Your zombies gain +40 health with each rank of Battle Hardened.", null, 211), 
+                    new le(10, "Thick Skull", this.types.health, this.costs.blood, 5e3, 1.125, 25, 100, "Your zombies gain +25 health with each rank.", null, 206), 
+                    new le(12, "Battle Hardened", this.types.health, this.costs.blood, 32e3, 1.115, 40, 100, "Your zombies gain +40 health with each rank of Battle Hardened.", null, 211), 
                     new le(17, "Tough as Nails", this.types.health, this.costs.blood, 1e6, 1.1, 100, 0, "Your zombies gain +100 health with each rank of Tough as Nails.", null, 220), 
                     new le(3, "Cold Storage", this.types.brainsCap, this.costs.blood, 150, 1.1, 50, 20, "Turns out you can use all of your spare blood to store brains and keep them fresh. Each rank increases your maximum brain capacity by 50.", null, null), 
                     new le(4, "Recycling is Cool", this.types.brainRecoverChance, this.costs.blood, 1e3, 1.1, .1, 10, "Why are we wasting so many good brains on this project? Each rank increases your chance to get a brain back from a dead zombie by 10%", null, null), 
@@ -1580,11 +1576,11 @@ var Incremancer;
                     new le(6, "Infected Bite", this.types.infectedBite, this.costs.blood, 3500, 1.2, .1, 10, "Your zombies are now infected with plague and could infect their victims too. Each rank adds 10% chance to inflict damage over time when a zombie attacks a target.", null, 204), 
                     new le(7, "Detonate", this.types.unlockSpell, this.costs.blood, 25e3, 1, 3, 1, "Learn the Detonate spell which can explode all of your zombies into a cloud of plague. Not exactly sure how useful that will be.", "New spell learned, Detonate!", 209), 
                     new le(8, "Gigazombies?", this.types.unlockSpell, this.costs.blood, 5e4, 1, 5, 1, "Learn the Gigazombies spell which will turn some of your zombies into hulking monstrosities with increased health and damage.", "New spell learned, Gigazombies!", 209), 
-                    new le(13, "Blazing Speed", this.types.burningSpeedPC, this.costs.blood, 3e4, 1.125, .05, 10, "The humans are using torches to set your zombies on fire. Perhaps we can turn the tables on them? Each rank increases the movement and attack speed of burning zombies by 5%", null, 207), 
-                    new le(14, "Spit it Out", this.types.spitDistance, this.costs.blood, 5e5, 1.3, 5, 10, "The first rank gives your zombies the ability to spit plague at enemies beyond normal attack range. Spit attacks do 50% zombie damage and infect the victim with plague. Subsequent ranks will increase the range of spit attacks.", null, 218), 
+                    new le(13, "Blazing Speed", this.types.burningSpeedPC, this.costs.blood, 3e4, 1.125, .05, 50, "The humans are using torches to set your zombies on fire. Perhaps we can turn the tables on them? Each rank increases the movement and attack speed of burning zombies by 5%", null, 207), 
+                    new le(14, "Spit it Out", this.types.spitDistance, this.costs.blood, 5e5, 1.3, 5, 50, "The first rank gives your zombies the ability to spit plague at enemies beyond normal attack range. Spit attacks do 50% zombie damage and infect the victim with plague. Subsequent ranks will increase the range of spit attacks.", null, 218), 
                     new le(15, "Runic Syphon", this.types.runicSyphon, this.costs.blood, 34e3, 1.45, .01, 10, "Infuse your runes for free! Each rank gives your Runesmith the ability to infuse 1% of your resource income, without consuming it. Additionally when blood and brains reach their storage limit, any additional resources will be infused automatically.", null, 210), 
-                    new le(19, "Faster Harpies", this.types.harpySpeed, this.costs.blood, 1e8, 1.035, 2, 100, "These harpies are way too slow! We have to make them faster. Each rank increases harpy speed by 2", null, 222), 
-                    new le(20, "Energy Rush", this.types.energyRate, this.costs.brains, 20, 1.1, .5, 1000, "Melting brains down in your cauldron to make smoothies can be beneficial for your health. It also increases your energy rate by 0.5 per second for each rank.", null, null), 
+                    new le(19, "Faster Harpies", this.types.harpySpeed, this.costs.blood, 1e8, 1.035, 2, 200, "These harpies are way too slow! We have to make them faster. Each rank increases harpy speed by 2", null, 222), 
+                    new le(20, "Energy Rush", this.types.energyRate, this.costs.brains, 20, 1.05, .5, 500, "Melting brains down in your cauldron to make smoothies can be beneficial for your health. It also increases your energy rate by 0.5 per second for each rank.", null, null), 
                     new le(21, "Master Summoner", this.types.energyCap, this.costs.brains, 10, 1.125, 5, 1000, "All the brains you harvested have proved fruitful in your experiments. Each rank raises your maximum energy by 5.", null, null), 
                     new le(22, "Primal Reflexes", this.types.speed, this.costs.brains, 10, 1.1, 1, 40, "The zombies retain more of their human agility increasing run speed by 1 for each rank.", null, null), 
                     new le(23, "Blood Harvest", this.types.bloodStoragePC, this.costs.brains, 20, 1.11, .1, 0, "All this brain power has enabled you to devise some superior blood storage methods. Each rank increases your maximum blood by 10%.", null, null), 
@@ -1592,12 +1588,12 @@ var Incremancer;
                     new le(25, "Infected Corpse", this.types.infectedBlast, this.costs.brains, 500, 1.2, .1, 10, "Fill your zombies with so much plague they are ready to explode! Each rank adds 10% chance for a zombie to explode into a cloud of plague upon death.", null, 204), 
                     new le(26, "Energy Charge", this.types.unlockSpell, this.costs.brains, 2e3, 1, 2, 1, "Learn the Energy Charge spell which can drastically increase your energy rate for a short time.", "New spell learned, Energy Charge!", 209), 
                     new le(27, "What Doesn't Kill You", this.types.blastHealing, this.costs.brains, 1e4, 1.10, .1, 1000, "Plague explosions from zombies and harpies will also heal nearby zombies for 10% of the explosion damage with each rank.", null, 218), 
-                    new le(28, "One is Never Enough", this.types.monsterLimit, this.costs.brains, 2e4, 1.1, 1, 150, "We're definitely going to need more than one golem to finish the job. Each rank increases your creature limit by 1", null, 220), 
+                    new le(28, "One is Never Enough", this.types.monsterLimit, this.costs.brains, 2e4, 1.1, 1, 50, "We're definitely going to need more than one golem to finish the job. Each rank increases your creature limit by 1", null, 220), 
                     new le(29, "Tank Buster", this.types.tankBuster, this.costs.brains, 4e5, 1.2, 1, 1, "Teach your harpies some new tricks. Once bought this upgrade will make your harpies drop fire bombs on tanks during boss stages.", null, 222), 
                     new le(30, "Improved Spikes", this.types.spikeDelay, this.costs.brains, 800, 1.1, 1, 4, "Each rank reduces the delay between plague spike activation by 20%", null, 208), 
-                    new le(40, "Bone Throne", this.types.energyCap, this.costs.bones, 50, 1.2, 10, 1000, "Sitting atop your throne of bones you can finally think clearly. Each rank increases maximum energy by 10.", null, null), 
-                    new le(41, "Crown of Bones", this.types.energyRate, this.costs.bones, 200, 1.05, .2, 10000, "Not just dapper, these spikes help channel your energy. Each rank increases energy rate by 0.2 per second.", null, null), 
-                    new le(42, "Bonebarrows", this.types.boneCollectorCapacity, this.costs.bones, 300, 1.1, 5, 1000, "Your bone collectors are struggling to carry all these bones. Maybe it's time we gave them an upgrade? Each rank increases their carrying capacity by 5.", null, null), 
+                    new le(40, "Bone Throne", this.types.energyCap, this.costs.bones, 50, 1.1, 10, 2000, "Sitting atop your throne of bones you can finally think clearly. Each rank increases maximum energy by 10.", null, null), 
+                    new le(41, "Crown of Bones", this.types.energyRate, this.costs.bones, 200, 1.025, .2, 2000, "Not just dapper, these spikes help channel your energy. Each rank increases energy rate by 0.2 per second.", null, null), 
+                    new le(42, "Bonebarrows", this.types.boneCollectorCapacity, this.costs.bones, 300, 1.1, 5, 30, "Your bone collectors are struggling to carry all these bones. Maybe it's time we gave them an upgrade? Each rank increases their carrying capacity by 5.", null, null), 
                     new le(43, "Bone Reinforced Tanks", this.types.bloodCap, this.costs.bones, 50, 1.04, 2e3, 0, "Finally! Now that we have a solid construction material we can get to work building better storage for our other resources. Each rank increases blood storage by 2000.", null, null), 
                     new le(44, "Brain Cage", this.types.brainsCap, this.costs.bones, 65, 1.04, 500, 0, "There's nothing I love more than a mind enslaved. Now we can put these brains where they belong. In cages! Each rank increases brain storage by 500.", null, null), 
                     new le(45, "Earth Freeze", this.types.unlockSpell, this.costs.bones, 5e3, 1, 4, 1, "Learn the Earth Freeze spell which can freeze all humans in place for a short time.", "New spell learned, Earth Freeze!", 209), 
@@ -1610,17 +1606,17 @@ var Incremancer;
                 this.prestigeUpgrades = [
                     new le(108, "A Small Investment", this.types.startingPC, this.costs.prestigePoints, 10, 1.25, 1, 0, "Each rank gives you an additional 500 blood, 50 brains, and 200 bones when starting a new level.", null, null), 
                     new le(109, "Time Warp", this.types.unlockSpell, this.costs.prestigePoints, 50, 1, 1, 1, "Unlock the Time Warp spell in order to speed up the flow of time.", null, null), 
-                    new le(110, "Master of Death", this.types.energyCost, this.costs.prestigePoints, 1e3, 1.5, 1, 9, "Each rank reduces the energy cost of summoning a zombie by 1", null, null), 
-                    new le(101, "Blood Storage", this.types.bloodStoragePC, this.costs.prestigePoints, 10, 1.225, .2, 0, "Additional 20% blood storage for each rank.", null, null), 
-                    new le(102, "Blood Rate", this.types.bloodGainPC, this.costs.prestigePoints, 10, 1.225, .2, 0, "Additional 20% blood income rate for each rank.", null, null), 
-                    new le(103, "Brain Storage", this.types.brainsStoragePC, this.costs.prestigePoints, 10, 1.225, .2, 0, "Additional 20% brain storage for each rank.", null, null), 
-                    new le(104, "Brain Rate", this.types.brainsGainPC, this.costs.prestigePoints, 10, 1.225, .2, 0, "Additional 20% brain income rate for each rank.", null, null), 
-                    new le(105, "Bone Rate", this.types.bonesGainPC, this.costs.prestigePoints, 10, 1.225, .2, 0, "Additional 20% bones income rate for each rank.", null, null), 
-                    new le(111, "Parts Rate", this.types.partsGainPC, this.costs.prestigePoints, 10, 1.225, .2, 0, "Additional 20% creature parts income rate for each rank.", null, null), 
+                    new le(110, "Master of Death", this.types.energyCost, this.costs.prestigePoints, 1e3, 1.2, 1, 100, "Each rank reduces the energy cost of summoning a zombie by 1", null, null), 
+                    new le(101, "Blood Storage", this.types.bloodStoragePC, this.costs.prestigePoints, 10, 1.21, .2, 0, "Additional 20% blood storage for each rank.", null, null), 
+                    new le(102, "Blood Rate", this.types.bloodGainPC, this.costs.prestigePoints, 10, 1.21, .2, 0, "Additional 20% blood income rate for each rank.", null, null), 
+                    new le(103, "Brain Storage", this.types.brainsStoragePC, this.costs.prestigePoints, 10, 1.21, .2, 0, "Additional 20% brain storage for each rank.", null, null), 
+                    new le(104, "Brain Rate", this.types.brainsGainPC, this.costs.prestigePoints, 10, 1.21, .2, 0, "Additional 20% brain income rate for each rank.", null, null), 
+                    new le(105, "Bone Rate", this.types.bonesGainPC, this.costs.prestigePoints, 10, 1.21, .2, 0, "Additional 20% bones income rate for each rank.", null, null), 
+                    new le(111, "Parts Rate", this.types.partsGainPC, this.costs.prestigePoints, 10, 1.21, .2, 0, "Additional 20% creature parts income rate for each rank.", null, null), 
                     new le(112, "Auto Construction", this.types.autoconstruction, this.costs.prestigePoints, 250, 1, 1, 1, "Unlock the ability to automatically start construction of the cheapest available building option.", null, null), 
                     new le(114, "Auto Shop", this.types.autoshop, this.costs.prestigePoints, 250, 1, 1, 1, "Unlock the ability to automatically purchase items from the shop.", null, null), 
-                    new le(113, "Graveyard Health", this.types.graveyardHealth, this.costs.prestigePoints, 10, 1.25, .1, 0, "Additional 10% graveyard health during boss levels with each rank.", null, null), 
-                    new le(115, "Talent Point", this.types.talentPoint, this.costs.prestigePoints, 100, 1.2, 1, 0, "Additional skeleton talent point", null, null)
+                    new le(113, "Graveyard Health", this.types.graveyardHealth, this.costs.prestigePoints, 10, 1.2, .1, 0, "Additional 10% graveyard health during boss levels with each rank.", null, null), 
+                    new le(115, "Talent Point", this.types.talentPoint, this.costs.prestigePoints, 50, 1.1, 1, 0, "Additional skeleton talent point", null, null)
                 ], oe.instance) return oe.instance;
 
             oe.instance = this
